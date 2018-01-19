@@ -1,2 +1,2 @@
 # aFlappyPig.github.io
-my blog
+[my blog](https://aflappypig.github.io)
