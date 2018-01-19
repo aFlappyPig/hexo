@@ -1,0 +1,79 @@
+# ========== Profile ========== #
+# avatar
+avatar: /avatar/pig.jpg
+# author name
+author: aFlappyPig
+# signature
+signature: 勿忘初心 及时行乐
+# SNS
+social:
+  email: 17621153307@163.com
+  github: https://github.com/aFlappyPig/
+  weibo:
+  # zhihu:
+  # facebook:
+  # twitter:
+  # instagram:
+  # stack-overflow:
+  # linkedin:
+  # others:
+  # rss: /atom.xml
+# friends
+friends:
+  liutaochange: https://liutaochange.github.io/
+  hanguozhi: http://blog.hanguozhi.com
+  # friendC :
+about:
+  enable: true
+  image: '/intro/about-page.jpg'
+
+# ========== Site ========== #
+# title of the site
+SEO_title: aFlappyPig's Blog
+# main title
+main_title: aFlappyPig's Blog.
+# subtitle
+subtitle: 勿忘初心 及时行乐
+# site haeder image
+site_header_image: '/intro/desktop.jpg'
+# post haeder image
+post_header_image: '/intro/post-bg.jpg'
+# 404 image
+_404_image: '/intro/404.jpg'
+
+# ========== Comment ========== #
+# Fill in the field to enable the corresponding comment plugin
+# If you want to add other comment plugin, edit in "custom.ejs"
+comment:
+  # livere  site: https://livere.com/
+  livere_uid:
+  # disqus  site: https://disqus.com/
+  disqus_shortname:
+  # changyan  site: http://changyan.kuaizhan.com/
+  changyan_appid:
+  changyan_conf:
+  # gitment  site: https://github.com/imsun/gitment
+  gitment_owner:
+  gitment_repo:
+  gitment_client_id:
+  gitment_client_secret:
+  # youyan  site: http://www.uyan.cc/
+  youyan_uid:
+
+# ========== Analytics ========== #
+# Busuanzi pv Analytics
+busuanzi: true
+# Baidu analytics
+baidu_analytics:
+# Google analytics
+google_analytics:
+# CNZZ analytics
+CNZZ_analytics:
+
+# ========== Others ========== #
+# favicon
+favicon: /assets/favicon.ico
+# truncate length (the default is 300)
+truncate_length:
+# enable toc
+toc: true
