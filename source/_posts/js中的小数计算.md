@@ -80,6 +80,22 @@ Number.prototype.toFixed = function (length) {
 ```
 
 ### 更新
- #### 2018-01-20
 
-今天在进行性能调优时，发现 mathjs 的包大小惊人的大，压缩之后竟然还有 500+kb，未压缩时有 1.6M+这在浏览器端简直是无法忍受的！所以建议在浏览器端慎用！以后再业务中还是考虑其他解决方案吧。
+#### 2018-01-20
+
+今天在进行性能调优时，发现 mathjs 的包大小惊人的大，压缩之后竟然还有 500+kb，未压缩时有 1.6M+这在浏览器端简直是无法忍受的！所以建议在浏览器端慎用！以后再业务中还是考虑其他解决方案吧。调研了其他几个库：
+
+* {% link decimal.js https://github.com/MikeMcl/decimal.js %}
+* {% link big.js https://github.com/MikeMcl/big.js %}
+* {% link bignumber.js https://github.com/MikeMcl/bignumber.js %}
+  计算方法如下
+
+```bash
+0.3 - 0.1                     // 0.19999999999999998
+x = new Decimal(0.3)
+x.minus(0.1)                  // '0.2'
+x                             // '0.3'
+```
+
+这三个库非常有意思，作者是同一个人，使用方法和 api 基本一样，作者讲述了这三个库{% link 各自的特点和适用情况 https://github.com/MikeMcl/big.js/wiki %}。简单的来说，big.js 是三个库中最小和最简单的，配置项和方法最少，以十进制为基础，其他两个库可以支持十六进制等。decimal.js 的精度是用有效数字而不是小数位数来表示的，所有的计算都是精确的（类似于 Python 的十进制模块），而不是仅仅涉及到除法，所以更适合于科学计算等。decimal.js 还支持非整数幂，并增加了三角函数和 exp，ln 和 log 方法。而 bignumber.js 计算精度居中，在用除法可能会损失精度，进行较小指数计算时性能不高。（注：本人英语水平有限，翻译和理解可能不准确，欢迎批评指正。）
+可以根据需要进行选择，这三个库的大小都是可以接受的，最大的decimal.js压缩后也只有31kb。
